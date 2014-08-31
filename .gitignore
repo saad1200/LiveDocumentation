@@ -1,2 +1,3 @@
 /_ReSharper.LiveDocumentation
 /Web/*.user
+/Web/obj/Debug/*.cache
