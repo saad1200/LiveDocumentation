@@ -1,0 +1,8 @@
+/node_modules
+/_site
+/src/public/components
+/*.suo
+/Web/*.user
+/_ReSharper.LiveDocumentation
+/Web/bin
+/Web/obj
