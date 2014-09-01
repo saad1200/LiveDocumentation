@@ -1,0 +1,9 @@
+/_ReSharper.LiveDocumentation
+/Web/*.user
+/Web/obj/Debug/*.cache
+/node_modules
+/*.user
+/*.suo
+/Web/obj
+/Web/_site
+/Web/bin
