@@ -1,0 +1,41 @@
+﻿<section id="login-view" class="mainbar" data-ng-controller="login as vm">
+    <section class="matter">
+ 
+        <div class="" id="loginModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3>Log in</h3>
+                    </div>
+                    <div class="modal-body">
+                        <div class="well">  
+
+                            <fieldset>
+                                <div class="row form-group ">
+                                    <div class="input-group-lg">
+                                        <input class="form-control" ng-model='vm.username' data-val="true" data-val-required="Required" id="Email" name="Email" placeholder="Email" required="required" title="Required" type="text" />
+                                    </div>
+                                </div>
+
+                                <div class="row form-group ">
+                                    <div class="input-group-lg">
+                                        <input class="form-control" ng-model='vm.password' data-val="true" data-val-length="The field must be a string with a maximum length of 30." data-val-length-max="30" data-val-required="Required" id="Password" name="Password" placeholder="password" required="required" title="Required" type="text" />
+                                    </div>
+                                </div>
+							
+							
+                                <div class="form-group">
+                                    <div class="controls">
+                                        <button class="btn btn-success" data-ng-click='vm.login()'>Login</button>
+                                    </div>
+                                </div>
+
+                            </fieldset>
+                        </div>  
+                    </div>
+                </div>
+            </div>
+        </div>
+ 
+    </section>
+</section>
