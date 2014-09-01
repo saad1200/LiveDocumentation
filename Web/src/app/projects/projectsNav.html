@@ -1,0 +1,6 @@
+﻿<a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Projects<span class="fa arrow"></span></a>
+<ul class="nav nav-second-level" data-ng-controller="projectsController as vm">
+    <li data-ng-repeat="project in vm.projects">
+        <a href="#/project/{{vm.project.id}}">{{project.name}}</a>
+    </li>
+</ul>
