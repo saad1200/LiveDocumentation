@@ -3,7 +3,7 @@
         <ul class="nav" id="side-menu">
             <li class="sidebar-search">
                 <div class="input-group custom-search-form">
-                    <input type="text" class="form-control" placeholder="Search...">
+                    <input data-ng-model="vm.searchTerm" type="text" class="form-control" placeholder="Search..." data-ng-keyup="vm.search()">
                     <span class="input-group-btn">
                     <button class="btn btn-default" type="button">
                         <i class="fa fa-search"></i>

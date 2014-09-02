@@ -23,10 +23,8 @@
             // Initialize a new promise 
             //var deferred = $q.defer();
 
-            console.log('checking ...: ' + JSON.stringify(identity));
-
-            if (!identity.isAuthenticated)
-                $location.url('/login');
+//            if (!identity.isAuthenticated)
+//                $location.url('/login');
             // Make an AJAX call to check if the user is logged in 
             //        $http.get('/loggedin').success(function (user) {
             //            // Authenticated 
@@ -58,12 +56,21 @@
                 config: {
                     title: 'admin',
                     templateUrl: 'app/admin/admin.html',
-                    access: { isSecured: true },
+                    access: { isSecured: false },
                     resolve: { loggedin: checkLoggedin },
                     settings: {
                         nav: 2,
                         content: '<i class="fa fa-lock"></i> Admin'
                     }
+                }
+            }, {
+                url: '/project/:id',
+                config: {
+                    title: 'projects',
+                    templateUrl: 'app/projects/project.html',
+                    access: { isSecured: false },
+                    resolve: { loggedin: checkLoggedin },
+                    settings: {}
                 }
             }, {
                 url: '/login',

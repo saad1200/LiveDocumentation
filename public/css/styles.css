@@ -347,3 +347,40 @@ table.dataTable thead .sorting:after {
 .ng-hide {
     display: none!important;
 }
+
+.feature {
+    margin-bottom: 1em;
+}
+.feature p {
+    padding-left: 2em;
+}
+
+.feature ul {
+    padding-left: 4em;
+    font-size: 0.9em;
+    list-style-type: none;
+}
+
+.feature .link {
+    cursor: pointer;
+    font-size: 0.7em;
+    padding-left: 6em;
+    color: GrayText;
+}
+
+.feature .scenario {
+    margin-left: 3em;
+}
+
+.feature .scenario p {
+    font-size: 0.9em;
+    text-decoration: underline;
+}
+
+.pass {
+    color: green;
+}
+
+.fail {
+    color: red;
+}
