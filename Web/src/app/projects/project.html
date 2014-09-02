@@ -1,0 +1,24 @@
+﻿<section id="projects-view" class="mainbar" data-ng-controller="projectController as vm">
+    <section class="matter">
+        <div class="container">
+            <div class="row"><h3>Front end project</h3></div>
+            <div class="row feature" data-ng-repeat="feature in vm.features">
+                <p class="{{feature.status}}">Feature: {{feature.title}}</p>
+                <ul class="{{feature.status}}">
+                    <li>{{feature.goal}}</li>
+                    <li>{{feature.actor}}</li>
+                    <li>{{feature.action}}</li>
+                </ul>
+                <a class="link" data-ng-click="vm.showSenarios($index)" data-ng-hide="feature.expand || feature.scenarios.length == 0">+ Senarios</a>
+                <div data-ng-show="feature.expand">
+                    <div class="scenario" data-ng-repeat="scenario in feature.scenarios">
+                        <p class="{{scenario.status}}">Scenario: {{scenario.title}}</p>
+                        <ul>
+                            <li class="{{step.status}}" data-ng-repeat="step in scenario.steps">{{step.title}}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>

@@ -3,11 +3,12 @@
 
     var controllerId = 'sidebar';
     angular.module('app').controller(controllerId,
-        ['$route', 'config', 'routes', 'identity', sidebar]);
+        ['$route', 'config', 'routes', 'identity', 'broadcaster', sidebar]);
 
-    function sidebar($route, config, routes, identity) {
+    function sidebar($route, config, routes, identity, broadcaster) {
         var vm = this;
 
+        vm.searchTerm = '';
         vm.isCurrent = isCurrent;
         vm.isSecured = isSecured;
         vm.isAuthenticated = false;
@@ -35,5 +36,9 @@
             var menuName = route.config.title;
             return $route.current.title.substr(0, menuName.length) === menuName ? 'current' : '';
         }
+
+        vm.search = function () {
+            broadcaster.searchProject(vm.searchTerm);
+        };
     };
 })();
